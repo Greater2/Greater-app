@@ -1,5 +1,3 @@
-
-
 html {
   font-size: 62.5%;
   box-sizing: border-box;
@@ -12,8 +10,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-#root{
-  height: 100%;
+
+#root {
+  height: 100vh;
 }
 /* Layout */
 
@@ -41,13 +40,13 @@ footer {
   color: #ffffff;
 }
 /* common for header */
-h1{
-    font-size: 1.8rem;
-    padding: 1rem 0;
+h1 {
+  font-size: 1.8rem;
+  padding: 1rem 0;
 }
-h2{
-    font-size: 1.6rem;
-    padding: 1rem 0;
+h2 {
+  font-size: 1.6rem;
+  padding: 1rem 0;
 }
 
 a {
@@ -57,6 +56,35 @@ a:hover {
   color: #ff8000;
 }
 
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+li {
+  margin-top: 1.5rem;
+}
+button {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 0.1rem #a4a4a4 solid;
+  font-size: 1.6rem;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8f8f8;
+  cursor: pointer;
+}
+button.primary {
+  background-color: #f0c040;
+}
+button:hover {
+  border: 0.1rem #404040 solid;
+}
+button.block {
+  width: 100%;
+}
 /* Header */
 header a {
   color: #ffffff;
@@ -77,6 +105,16 @@ a.brand {
 .row.center {
   justify-content: center;
 }
+.row.top {
+  align-items: flex-start;
+  margin-top: 2rem;
+}
+.col-1 {
+  flex: 1 1 25rem;
+}
+.col-2 {
+  flex: 2 1 50rem;
+}
 
 /* image */
 img {
@@ -86,6 +124,11 @@ img.medium {
   max-width: 29rem;
   width: 100%;
 }
+img.large {
+  max-width: 40rem;
+  width: 100%;
+}
+
 /* Card */
 .card {
   border: 0.1rem #c0c0c0 solid;
@@ -93,17 +136,40 @@ img.medium {
   border-radius: 0.5rem;
   margin: 1rem;
 }
-.card-body{
-    padding: 1rem;
+.card-body {
+  padding: 1rem;
 }
 .card-body > * {
-    margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
 }
-.price{
-    font-size: 2rem;
+.price {
+  font-size: 2rem;
 }
-.rating span{
-    color: #f0c040;
-    margin: 0.1rem;
+.rating span {
+  color: #f0c040;
+  margin: 0.1rem;
+}
+.rating span:last-child {
+  color: #404040;
 }
 
+/* Alert */
+.success {
+  color: #20a020;
+}
+.danger {
+  color: #a02020;
+}
+.alert {
+  padding: 1rem;
+  border: 0.1rem solid transparent;
+  border-radius: 0.5rem;
+}
+.alert-info{
+  color: #2020a0;
+  background-color: #e0e0ff;
+}
+.alert-danger{
+  color: #a02020;
+  background-color: #ffe0e0e0;
+}
